@@ -1,0 +1,38 @@
+{
+    "name": "patrixshah-uk-vat-checker/hmrc-vat-check",
+    "description": "A Laravel package to check UK VAT numbers by using HMRC Goverment Portal. It's using VAT API version 2.0 with OAuth 2.",
+    "keywords": [
+        "laravel",
+        "package",
+        "vat",
+        "hmrc",
+        "api",
+        "uk-vat-checker"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pratik Shah",
+            "email": "patrixshah@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PatrixshahUKVatChecker\\HmrcVatCheck\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PatrixshahUKVatChecker\\HmrcVatCheck\\HmrcVatCheckServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^7.4|^8.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
