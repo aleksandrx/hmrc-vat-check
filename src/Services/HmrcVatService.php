@@ -58,7 +58,7 @@ class HmrcVatService
     {
         $accessToken = $this->getAccessToken();
         $response = Http::withToken($accessToken)
-            ->accept('application/vnd.hmrc.1.0+json')
+            ->accept('application/vnd.hmrc.2.0+json')
             ->get("{$this->checkVatNumberUrl}/$vatNumber");
         if ($response->successful()) {
             return $response->json();
