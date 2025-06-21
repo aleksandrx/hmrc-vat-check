@@ -63,6 +63,6 @@ class HmrcVatService
         if ($response->successful()) {
             return $response->json();
         }
-        throw new \Exception('Error checking VAT number: ' . $response->body());
+        throw new \Exception( str_replace(['[', ']', '"'], '', $response->collect('message')));
     }
 }
